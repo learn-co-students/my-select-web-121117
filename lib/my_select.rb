@@ -1,12 +1,12 @@
 def my_select(collection)
-    i = 0
-    return_collect = []
-    
-    while i < collection.size
-        if yield(collection[i]) == true
-        return_collect.push(collection[i])
+  i = 0
+  selection = []
+
+  while i < collection.length
+    if yield(collection[i])
+      selection << collection[i]
     end
-    i += 1
-    end
-    return_collect
+    i+=1
+  end
+  selection
 end
